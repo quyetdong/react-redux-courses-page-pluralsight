@@ -9,6 +9,8 @@ export default function courseReducer(state = initialState.courses, action) {
       return [...state, { ...action.course }];
     case actionTypes.UPDATE_COURSE_SUCCESS:
       return state.map(course => course.id === action.course.id ? action.course : course);
+    case actionTypes.DELETE_COURSE_OPTIMISTIC:
+      return state.filter(course => course.id !== action.course.id);
     default:
       return state;
   }
