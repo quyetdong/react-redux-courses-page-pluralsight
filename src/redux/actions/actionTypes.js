@@ -12,7 +12,7 @@ const actionTypes = {
 // By convention, actions that end in "_SUCCESS" are assumed to have been the result of a completed
 // API call. But since we're doing an optimistic delete, we're hiding loading state.
 // So this action name deliberately omits the "_SUCCESS" suffix.
-// If it had one, our apiCallsInProgress counter would be decremented below zero
-// because we're not incrementing the number of apiCallsInProgress when the delete request begins.
+// If it had one, our apiCallsInprogress counter would be decremented below zero
+// because we're not incrementing the number of apiCallsInprogress when the delete request begins.
 
 export default actionTypes;
